@@ -6,11 +6,11 @@ class Program
 {
   public static Dictionary<int,string[]> riddleBook = new Dictionary<int,string[]>()
   {
-    {1, new string[] {"What has to be broken before you can use it?", "An egg"}},
-    {2, new string[] {"I’m tall when I’m young, and I’m short when I’m old. What am I?", "A candle"}},
-    {3, new string[] {"What month of the year has 28 days?", "All of them"}},
-    {4, new string[] {"What is full of holes but still holds water?", "A sponge"}},
-    {5, new string[] {"What question can you never answer yes to?", "Are you asleep yet?"}},
+    {0, new string[] {"What has to be broken before you can use it?", "An egg"}},
+    {1, new string[] {"I’m tall when I’m young, and I’m short when I’m old. What am I?", "A candle"}},
+    {2, new string[] {"What month of the year has 28 days?", "All of them"}},
+    {3, new string[] {"What is full of holes but still holds water?", "A sponge"}},
+    {4, new string[] {"What question can you never answer yes to?", "Are you asleep yet?"}},
   };
   // riddleBook.Add("q1","question");
 
