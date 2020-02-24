@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+// using System.Serializable;
 
 class Program 
 {
@@ -34,16 +35,48 @@ class Program
 
   static void AskRiddle()
   {
-    Console.WriteLine(riddleBook[1][0]);
+    var rand = new Random();
+    int index = rand.Next(5);
+
+    Console.WriteLine(riddleBook[index][0]);
     string answer = Console.ReadLine();
-    if (answer == riddleBook[1][1])
+    if (answer == riddleBook[index][1])
     {
+      Console.WriteLine();
+      Console.WriteLine("------------------------------------------");
       Console.WriteLine("Super job traveler!");
+      Console.WriteLine("Care to answer another riddle?");
+      Console.WriteLine("Press 'Y' to start or return to 'Enter' to quit. ");
+      string input = Console.ReadLine();
+
+      if(input == "Y" || input == "y")
+      {
+        AskRiddle();
+      }
+      else
+      {
+        Console.WriteLine("So long traveler");
+      }
     }
     else
     {
-      Console.WriteLine("NOPE! the answer was" + riddleBook[1][1]);
+      Console.WriteLine();
+      Console.WriteLine("--------------------------------------");
+      Console.WriteLine("NOPE! the answer was " + riddleBook[index][1]);
       Console.WriteLine("I don't want to say you suck, but if the shoe fits...");
+      Console.WriteLine();
+      Console.WriteLine("Care to answer another riddle?");
+      Console.WriteLine("Press 'Y' to start or return to 'Enter' to quit. ");
+      string input = Console.ReadLine();
+
+      if(input == "Y" || input == "y")
+      {
+        AskRiddle();
+      }
+      else
+      {
+        Console.WriteLine("So long traveler");
+      }
     }
   }
 
