@@ -1,7 +1,18 @@
 using System;
+using System.Collections.Generic;
 
 class Program 
 {
+  public static Dictionary<int,string[]> riddleBook = new Dictionary<int,string[]>()
+  {
+    {1, new string[] {"What has to be broken before you can use it?", "An egg"}},
+    {2, new string[] {"I’m tall when I’m young, and I’m short when I’m old. What am I?", "A candle"}},
+    {3, new string[] {"What month of the year has 28 days?", "All of them"}},
+    {4, new string[] {"What is full of holes but still holds water?", "A sponge"}},
+    {5, new string[] {"What question can you never answer yes to?", "Are you asleep yet?"}},
+  };
+  // riddleBook.Add("q1","question");
+
   static void Main()
   {
     Console.WriteLine("Welcome young traveler!");
@@ -13,7 +24,7 @@ class Program
     if(toStart == "y" || toStart == "Y")
     {
       //start game
-      Riddle();
+      AskRiddle();
     }
     else
     {
@@ -21,18 +32,19 @@ class Program
     }
   }
 
-  static void Riddle()
+  static void AskRiddle()
   {
-    Console.WriteLine("What has no door, hinge, key, or lid, but a golden treasure inside in hid?");
+    Console.WriteLine(riddleBook[1][0]);
     string answer = Console.ReadLine();
-    if (answer == "egg" || answer == "an egg")
+    if (answer == riddleBook[1][1])
     {
       Console.WriteLine("Super job traveler!");
     }
     else
     {
-      Console.WriteLine("NOPE! the answer was 'an Egg'");
+      Console.WriteLine("NOPE! the answer was" + riddleBook[1][1]);
       Console.WriteLine("I don't want to say you suck, but if the shoe fits...");
     }
   }
+
 }
